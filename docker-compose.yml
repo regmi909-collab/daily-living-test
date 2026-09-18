@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  # 1. PostgreSQL Database
+  db:
+    image: postgres:16-alpine
+    container_name: meditation_guru_db
+    restart: always
+    environment:
+      POSTGRES_DB: meditation_guru
+      POSTGRES_USER: guru_user
+      POSTGRES_PASSWORD: guru_secure_password_change_in_production
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U guru_user -d meditation_guru"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # 2. FastAPI Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: meditation_guru_backend
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - PROJECT_NAME=Daily Living — Meditation Guru
+      - DATABASE_URL=postgresql://guru_user:guru_secure_password_change_in_production@db:5432/meditation_guru
+      - SECRET_KEY=meditation_guru_production_jwt_secret_key_2026
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID:-}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET:-}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - GEMINI_MODEL=gemini-2.5-flash
+    ports:
+      - "8000:8000"
+
+  # 3. Frontend Web App & Reverse Proxy
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: meditation_guru_frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+
+volumes:
+  pgdata:
+    driver: local

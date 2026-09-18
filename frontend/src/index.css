@@ -1,0 +1,411 @@
+/* Meditation Guru — Multi-Theme Zen Design System */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* ==============================================================================
+   1. DEFAULT THEME: Warm Lotus (Light Organic Mindful Theme)
+   ============================================================================== */
+/* ==============================================================================
+   1. DEFAULT THEME: Warm Lotus (Light Organic Mindful Theme — Linen & Sage)
+   ============================================================================== */
+:root, [data-theme="light-lotus"] {
+  --bg-primary: #FAF7F2;
+  --bg-secondary: #F2ECE1;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FCFAF7;
+  --bg-glass: rgba(56, 118, 78, 0.04);
+  --nav-bg: rgba(250, 247, 242, 0.92);
+  
+  --accent-sage: #2E6F45;
+  --accent-sage-soft: rgba(46, 111, 69, 0.12);
+  --accent-sage-hover: #235736;
+  --accent-gold: #A86E12;
+  --accent-coral: #BA4E32;
+  --accent-sky: #2B6CB0;
+  --accent-purple: #704E72;
+
+  --text-heading: #18231E;
+  --text-primary: #27342F;
+  --text-secondary: #4A5B53;
+  --text-muted: #73857D;
+  
+  --border-subtle: rgba(46, 111, 69, 0.14);
+  --border-focus: rgba(46, 111, 69, 0.5);
+
+  --shadow-sm: 0 4px 16px rgba(50, 40, 30, 0.06);
+  --shadow-md: 0 12px 36px rgba(50, 40, 30, 0.1);
+  --shadow-glow: 0 0 35px rgba(46, 111, 69, 0.18);
+
+  --bg-ambient-gradient: 
+    radial-gradient(circle at 12% 15%, rgba(46, 111, 69, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 88% 85%, rgba(186, 78, 50, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(168, 110, 18, 0.04) 0%, transparent 60%);
+
+  --orb-gradient: radial-gradient(circle at 40% 40%, rgba(46, 111, 69, 0.18) 0%, rgba(242, 236, 225, 0.95) 75%);
+  --orb-border: rgba(46, 111, 69, 0.35);
+  --time-digit-color: #18231E;
+
+  --font-ui: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Newsreader', Georgia, serif;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  --transition-smooth: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==============================================================================
+   2. THEME: Ocean Breeze / Blue Mind (Light Refreshing Sky & Coastal Azure)
+   ============================================================================== */
+[data-theme="light-sky"] {
+  --bg-primary: #F0F6F9;
+  --bg-secondary: #E3EFF4;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FBFC;
+  --bg-glass: rgba(2, 132, 199, 0.04);
+  --nav-bg: rgba(240, 246, 249, 0.94);
+
+  --accent-sage: #0284C7;
+  --accent-sage-soft: rgba(2, 132, 199, 0.12);
+  --accent-sage-hover: #0369A1;
+  --accent-gold: #C07005;
+  --accent-coral: #D9465F;
+  --accent-sky: #0EA5E9;
+  --accent-purple: #6366F1;
+
+  --text-heading: #0B1728;
+  --text-primary: #1E2B3D;
+  --text-secondary: #3B4D63;
+  --text-muted: #64748B;
+
+  --border-subtle: rgba(2, 132, 199, 0.14);
+  --border-focus: rgba(2, 132, 199, 0.5);
+
+  --shadow-sm: 0 4px 16px rgba(2, 60, 110, 0.06);
+  --shadow-md: 0 12px 36px rgba(2, 60, 110, 0.1);
+  --shadow-glow: 0 0 35px rgba(2, 132, 199, 0.18);
+
+  --bg-ambient-gradient: 
+    radial-gradient(circle at 10% 10%, rgba(2, 132, 199, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(14, 165, 233, 0.06) 0%, transparent 50%);
+
+  --orb-gradient: radial-gradient(circle at 40% 40%, rgba(2, 132, 199, 0.18) 0%, rgba(227, 239, 244, 0.95) 75%);
+  --orb-border: rgba(2, 132, 199, 0.35);
+  --time-digit-color: #0B1728;
+}
+
+/* ==============================================================================
+   3. THEME: Kyoto Zen Sand (Natural Tatami & Minimalist Japanese Stone)
+   ============================================================================== */
+[data-theme="light-sand"] {
+  --bg-primary: #F5F3EC;
+  --bg-secondary: #EBE7DC;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FAF9F6;
+  --bg-glass: rgba(78, 110, 88, 0.04);
+  --nav-bg: rgba(245, 243, 236, 0.94);
+
+  --accent-sage: #44654F;
+  --accent-sage-soft: rgba(68, 101, 79, 0.12);
+  --accent-sage-hover: #35503E;
+  --accent-gold: #936325;
+  --accent-coral: #B04B32;
+  --accent-sky: #42637A;
+  --accent-purple: #6B5266;
+
+  --text-heading: #1C1917;
+  --text-primary: #2C2724;
+  --text-secondary: #57504A;
+  --text-muted: #7D746D;
+
+  --border-subtle: rgba(68, 101, 79, 0.15);
+  --border-focus: rgba(68, 101, 79, 0.45);
+
+  --shadow-sm: 0 4px 16px rgba(45, 40, 35, 0.06);
+  --shadow-md: 0 12px 36px rgba(45, 40, 35, 0.09);
+  --shadow-glow: 0 0 35px rgba(68, 101, 79, 0.15);
+
+  --bg-ambient-gradient: 
+    radial-gradient(circle at 15% 15%, rgba(68, 101, 79, 0.07) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(147, 99, 37, 0.05) 0%, transparent 45%);
+
+  --orb-gradient: radial-gradient(circle at 40% 40%, rgba(68, 101, 79, 0.18) 0%, rgba(235, 231, 220, 0.95) 75%);
+  --orb-border: rgba(68, 101, 79, 0.35);
+  --time-digit-color: #1C1917;
+}
+
+/* ==============================================================================
+   4. THEME: Morning Dawn (Soft Rose Petal & Sunrise Gold)
+   ============================================================================== */
+[data-theme="light-dawn"] {
+  --bg-primary: #FFF8F5;
+  --bg-secondary: #F8ECE7;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FFFBF9;
+  --bg-glass: rgba(186, 78, 50, 0.04);
+  --nav-bg: rgba(255, 248, 245, 0.94);
+
+  --accent-sage: #B84D35;
+  --accent-sage-soft: rgba(184, 77, 53, 0.12);
+  --accent-sage-hover: #9E3E28;
+  --accent-gold: #B47118;
+  --accent-coral: #C9553E;
+  --accent-sky: #3B728D;
+  --accent-purple: #824E6B;
+
+  --text-heading: #241410;
+  --text-primary: #382420;
+  --text-secondary: #5F4540;
+  --text-muted: #8A6E68;
+
+  --border-subtle: rgba(184, 77, 53, 0.15);
+  --border-focus: rgba(184, 77, 53, 0.45);
+
+  --shadow-sm: 0 4px 16px rgba(70, 30, 20, 0.06);
+  --shadow-md: 0 12px 36px rgba(70, 30, 20, 0.09);
+  --shadow-glow: 0 0 35px rgba(184, 77, 53, 0.16);
+
+  --bg-ambient-gradient: 
+    radial-gradient(circle at 12% 15%, rgba(184, 77, 53, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 88% 85%, rgba(180, 113, 24, 0.06) 0%, transparent 45%);
+
+  --orb-gradient: radial-gradient(circle at 40% 40%, rgba(184, 77, 53, 0.18) 0%, rgba(248, 236, 231, 0.95) 75%);
+  --orb-border: rgba(184, 77, 53, 0.35);
+  --time-digit-color: #241410;
+}
+
+/* ==============================================================================
+   4. THEME: Midnight Sanctuary (Evening / Night Deep Dark Mode)
+   ============================================================================== */
+[data-theme="dark-sanctuary"] {
+  --bg-primary: #0A0E13;
+  --bg-secondary: #10161E;
+  --bg-card: rgba(18, 25, 34, 0.75);
+  --bg-card-hover: rgba(26, 37, 50, 0.88);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --nav-bg: rgba(10, 14, 19, 0.88);
+
+  --accent-sage: #5BB381;
+  --accent-sage-soft: rgba(91, 179, 129, 0.15);
+  --accent-sage-hover: #48A06E;
+  --accent-gold: #E8C170;
+  --accent-coral: #E07A5F;
+  --accent-sky: #70A9A1;
+  --accent-purple: #9D8189;
+
+  --text-heading: #FFFFFF;
+  --text-primary: #F4F6F8;
+  --text-secondary: #9FAEC0;
+  --text-muted: #64748B;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(91, 179, 129, 0.5);
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 35px rgba(91, 179, 129, 0.2);
+
+  --bg-ambient-gradient: 
+    radial-gradient(circle at 15% 15%, rgba(91, 179, 129, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(112, 169, 161, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(232, 193, 112, 0.03) 0%, transparent 60%);
+
+  --orb-gradient: radial-gradient(circle at 40% 40%, rgba(91, 179, 129, 0.25) 0%, rgba(16, 22, 30, 0.95) 75%);
+  --orb-border: rgba(91, 179, 129, 0.35);
+  --time-digit-color: #FFFFFF;
+}
+
+/* ==============================================================================
+   Global Element Styles
+   ============================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: var(--bg-ambient-gradient);
+  background-attachment: fixed;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, .serif-heading {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--text-heading);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--accent-sage);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+a:hover {
+  color: var(--accent-sage-hover);
+}
+
+button {
+  font-family: var(--font-ui);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(56, 118, 78, 0.2);
+  box-shadow: var(--shadow-md);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--accent-sage) 0%, var(--accent-sage-hover) 100%);
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 15px rgba(56, 118, 78, 0.25);
+  transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 118, 78, 0.35);
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  transition: var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: var(--border-focus);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+}
+
+.btn-ghost:hover {
+  color: var(--text-heading);
+  background: var(--bg-glass);
+}
+
+/* Badges / Chips */
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+}
+
+.tag-badge:hover, .tag-badge.active {
+  background: var(--accent-sage-soft);
+  color: var(--accent-sage);
+  border-color: var(--accent-sage);
+}
+
+/* Animations */
+@keyframes breatheInhale {
+  0% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.35); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.85; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes ripple {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 24px 20px 80px;
+}
+
+/* Responsive grid layouts */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 16px 14px 100px;
+  }
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+}

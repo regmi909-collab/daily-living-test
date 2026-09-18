@@ -1,0 +1,9 @@
+{
+  "appId": "com.dailyliving.meditationguru",
+  "appName": "Daily Living - Meditation Guru",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
